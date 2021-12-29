@@ -1,6 +1,12 @@
 ## How to run
 
-Run this to enable tailwind css standalone to refresh styles as code is being written
+Depends on `npm`, run this command
+
+```bash
+npm install
+```
+
+Run this command to enable tailwind css standalone to refresh styles as code is being written
 
 ```bash
 tailwindcss -i app.css -o ./layouts/css/styles.css --watch
