@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Model 1</title>
+    <style>
+        .layout {
+            background-color: cadetblue;
+            display: grid;
+
+        }
+
+        .header_layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "left center right";
+        }
+
+        .header_left {
+            grid-area: left;
+            background-color: #444;
+            justify-self: left;
+        }
+
+        .header_center {
+            grid-area: center;
+            background-color: #333;
+            justify-self: center;
+        }
+
+        .header_right {
+            grid-area: right;
+            background-color: #111;
+            justify-self: right;
+        }
+
+        .body_layout {
+            background-color: #234;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+        }
+
+        .sidebar {
+
+        }
+
+        .data {
+
+        }
+    </style>
+</head>
+
+<body class="p-2 bg-slate-800 text-orange-300">
+    <div class="layout">
+        <div class="header_layout">
+            <div class="header_left p-1">
+                left
+            </div>
+
+            <div class="header_center p-1">
+                center
+            </div>
+
+            <div class="header_right p-1">
+                right
+            </div>
+        </div>
+
+        <div class="body_layout">
+            <div class="sidebar p-2">
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+                option 6
+            </div>
+
+            <div class="data p-2">
+                <p>In our urban and suburban houses what should we do without cats? In our sitting or bedrooms, our libraries, in our kitchens and storerooms, our farms, barns, and rickyards, in our docks, our granaries, our ships, and our wharves, in our corn markets, meat markets, and other places too numerous to mention, how useful they are! In our ships, however, the rats oft set them at defiance; still they are of great service.</p>
+                <p>How wonderfully patient is the cat when watching for rats or mice, awaiting their egress from their place of refuge or that which is their home! How well Shakespeare in Pericles, Act iii., describes this keen attention of the cat to its natural pursuit!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
