@@ -13,7 +13,7 @@
 <body class="p-2 bg-slate-800 text-orange-300">
   <div class="layout" x-data="{ show_sidebar: false }">
     <div class="header_layout bg-orange-400 text-slate-700 pb-1.5">
-      <div class="header_left p-1 text-2xl">
+      <div class="header_left md:hidden p-1 text-2xl">
         <button class="text-gray-900 w-10 h-10 relative focus:outline-none" @click="show_sidebar = !show_sidebar">
           <span class="sr-only">Open main menu</span>
           <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -39,8 +39,8 @@
       </div>
     </div>
 
-    <div class="body_layout">
-      <div x-cloak class="sidebar p-2" x-show="show_sidebar">
+    <div class="body_layout flex">
+      <div x-cloak class="p-2" :class="show_sidebar ? '' : 'hidden md:inline-block'">
         option 1
         option 2
         option 3
@@ -50,7 +50,7 @@
         option 7
       </div>
 
-      <div class="data p-2">
+      <div class="p-2">
         <p>In our urban and suburban houses what should we do without cats? In our sitting or bedrooms, our
           libraries, in our kitchens and storerooms, our farms, barns, and rickyards, in our docks, our
           granaries, our ships, and our wharves, in our corn markets, meat markets, and other places too
