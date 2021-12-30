@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../css/styles.css" rel="stylesheet">
   <link href="model1.css" rel="stylesheet">
-  <script src="//unpkg.com/alpinejs" defer></script>
+  <script defer src="//unpkg.com/alpinejs" defer></script>
   <title>Model 1</title>
 </head>
 
@@ -40,7 +40,7 @@
     </div>
 
     <div class="body_layout">
-      <div class="sidebar p-2" x-cloak x-show="show_sidebar">
+      <div x-cloak class="sidebar p-2" x-show="show_sidebar">
         option 1
         option 2
         option 3
@@ -59,7 +59,10 @@
         <p>How wonderfully patient is the cat when watching for rats or mice, awaiting their egress from their
           place of refuge or that which is their home! How well Shakespeare in Pericles, Act iii., describes
           this keen attention of the cat to its natural pursuit!</p>
-        <a href="/layouts" class="underline decoration-indigo-500">Back to main menu</a>
+
+        <div class="mt-4">
+          <a href="/layouts" class="underline decoration-indigo-500">Back to main menu</a>
+        </div>
       </div>
     </div>
   </div>
