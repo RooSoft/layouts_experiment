@@ -8,9 +8,6 @@
     <title>Model 1</title>
     <style>
         .layout {
-            background-color: cadetblue;
-            display: grid;
-
         }
 
         .header_layout {
@@ -21,24 +18,20 @@
 
         .header_left {
             grid-area: left;
-            background-color: #444;
             justify-self: left;
         }
 
         .header_center {
             grid-area: center;
-            background-color: #333;
             justify-self: center;
         }
 
         .header_right {
             grid-area: right;
-            background-color: #111;
             justify-self: right;
         }
 
         .body_layout {
-            background-color: #234;
             display: grid;
             grid-template-columns: 100px 1fr;
         }
@@ -55,16 +48,16 @@
 
 <body class="p-2 bg-slate-800 text-orange-300">
     <div class="layout">
-        <div class="header_layout">
-            <div class="header_left p-1">
+        <div class="header_layout bg-orange-400 text-slate-700">
+            <div class="header_left p-1 text-2xl">
                 left
             </div>
 
-            <div class="header_center p-1">
+            <div class="header_center p-1 text-4xl">
                 center
             </div>
 
-            <div class="header_right p-1">
+            <div class="header_right p-1 text-2xl">
                 right
             </div>
         </div>
