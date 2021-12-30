@@ -2,47 +2,67 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/styles.css" rel="stylesheet">
-    <link href="model1.css" rel="stylesheet">
-    <title>Model 1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/styles.css" rel="stylesheet">
+  <link href="model1.css" rel="stylesheet">
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <title>Model 1</title>
 </head>
 
 <body class="p-2 bg-slate-800 text-orange-300">
-    <div class="layout">
-        <div class="header_layout bg-orange-400 text-slate-700 mb-4">
-            <div class="header_left p-1 text-2xl">
-                left
-            </div>
+  <div class="layout" x-data="{ show_sidebar: false }">
+    <div class="header_layout bg-orange-400 text-slate-700 pb-1.5">
+      <div class="header_left p-1 text-2xl">
+        <button class="text-gray-900 w-10 h-10 relative focus:outline-none" @click="show_sidebar = !show_sidebar">
+          <span class="sr-only">Open main menu</span>
+          <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <span 
+              class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
+              :class="{'rotate-45': show_sidebar,' -translate-y-2': !show_sidebar }"></span>
+            <span 
+              class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
+              :class="{'opacity-0': show_sidebar } "></span>
+            <span 
+              class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
+              :class="{'-rotate-45': show_sidebar, ' translate-y-2': !show_sidebar}"></span>
+          </div>
+        </button>
+      </div>
 
-            <div class="header_center p-1 text-4xl">
-                center
-            </div>
+      <div class="header_center p-1 pt-2.5 text-4xl">
+        Branding
+      </div>
 
-            <div class="header_right p-1 text-2xl">
-                right
-            </div>
-        </div>
-
-        <div class="body_layout">
-            <div class="sidebar p-2">
-                option 1
-                option 2
-                option 3
-                option 4
-                option 5
-                option 6
-                option 7
-            </div>
-
-            <div class="data p-2">
-                <p>In our urban and suburban houses what should we do without cats? In our sitting or bedrooms, our libraries, in our kitchens and storerooms, our farms, barns, and rickyards, in our docks, our granaries, our ships, and our wharves, in our corn markets, meat markets, and other places too numerous to mention, how useful they are! In our ships, however, the rats oft set them at defiance; still they are of great service.</p>
-                <p>How wonderfully patient is the cat when watching for rats or mice, awaiting their egress from their place of refuge or that which is their home! How well Shakespeare in Pericles, Act iii., describes this keen attention of the cat to its natural pursuit!</p>
-                <a href="/layouts" class="underline decoration-indigo-500">Back to main menu</a>
-            </div>
-        </div>
+      <div class="header_right pt-3.5 pr-4 text-2xl">
+        right
+      </div>
     </div>
+
+    <div class="body_layout">
+      <div class="sidebar p-2" x-show="show_sidebar">
+        option 1
+        option 2
+        option 3
+        option 4
+        option 5
+        option 6
+        option 7
+      </div>
+
+      <div class="data p-2">
+        <p>In our urban and suburban houses what should we do without cats? In our sitting or bedrooms, our
+          libraries, in our kitchens and storerooms, our farms, barns, and rickyards, in our docks, our
+          granaries, our ships, and our wharves, in our corn markets, meat markets, and other places too
+          numerous to mention, how useful they are! In our ships, however, the rats oft set them at defiance;
+          still they are of great service.</p>
+        <p>How wonderfully patient is the cat when watching for rats or mice, awaiting their egress from their
+          place of refuge or that which is their home! How well Shakespeare in Pericles, Act iii., describes
+          this keen attention of the cat to its natural pursuit!</p>
+        <a href="/layouts" class="underline decoration-indigo-500">Back to main menu</a>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
