@@ -1,0 +1,36 @@
+.layout {
+}
+
+.header_layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left center right";
+}
+
+.header_left {
+    grid-area: left;
+    justify-self: left;
+}
+
+.header_center {
+    grid-area: center;
+    justify-self: center;
+}
+
+.header_right {
+    grid-area: right;
+    justify-self: right;
+}
+
+.body_layout {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+
+.sidebar {
+
+}
+
+.data {
+
+}
