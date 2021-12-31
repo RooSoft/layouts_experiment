@@ -40,14 +40,29 @@
     </div>
 
     <div class="body_layout flex">
-      <div x-cloak class="p-2" :class="show_sidebar ? '' : 'hidden md:inline-block'">
-        option 1
-        option 2
-        option 3
-        option 4
-        option 5
-        option 6
-        option 7
+      <div x-cloak class="pt-3 mr-2" :class="show_sidebar ? '' : 'hidden md:inline-block'">
+        <div class="text-sm w-48 border border-gray-600 rounded-lg">
+          <a href="#">
+            <div class="py-4 px-6 rounded-t-lg
+              text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700
+                border-b border-gray-600">
+              Channels
+            </div>
+          </a>
+          <a href="#">
+            <div class="pt-4 pb-4 px-6
+              text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700
+              border-b border-gray-600">
+              Forward attempts
+            </div>
+          </a>
+          <a href="#">
+            <div class="py-4 px-6 rounded-b-lg
+              text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700">
+              Link fails
+            </div>
+          </a>
+        </div>
       </div>
 
       <div class="p-2">
