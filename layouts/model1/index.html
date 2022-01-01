@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../css/styles.css" rel="stylesheet">
   <link href="model1.css" rel="stylesheet">
   <script defer src="//unpkg.com/alpinejs" defer></script>
@@ -17,14 +18,11 @@
         <button class="text-gray-900 w-10 h-10 relative focus:outline-none" @click="show_sidebar = !show_sidebar">
           <span class="sr-only">Open main menu</span>
           <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <span 
-              class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
+            <span class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
               :class="{'rotate-45': show_sidebar,' -translate-y-2': !show_sidebar }"></span>
-            <span 
-              class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
+            <span class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
               :class="{'opacity-0': show_sidebar } "></span>
-            <span 
-              class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
+            <span class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
               :class="{'-rotate-45': show_sidebar, ' translate-y-2': !show_sidebar}"></span>
           </div>
         </button>
@@ -40,29 +38,49 @@
     </div>
 
     <div class="body_layout flex">
-      <div x-cloak class="pt-3 mr-2" :class="show_sidebar ? '' : 'hidden md:inline-block'">
-        <div class="text-sm w-48 border border-gray-600 rounded-lg">
+      <div x-cloak class="sidebar pt-3 mr-2" :class="show_sidebar ? '' : 'hidden md:inline-block'">
+        <nav class="text-sm w-48 border border-gray-600 rounded-lg">
           <a href="#">
-            <div class="py-4 px-6 rounded-t-lg
+            <div class="px-2 rounded-t-lg
               text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700
                 border-b border-gray-600">
-              Channels
+              <div class="py-4 px-2
+              text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700 flex items-center">
+                <div><i class="material-icons text-3xl">electrical_services</i></div>
+                <div class="ml-2">Channels</div>
+              </div>
             </div>
           </a>
           <a href="#">
-            <div class="pt-4 pb-4 px-6
+            <div class="
               text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700
               border-b border-gray-600">
-              Forward attempts
+              <div class="py-4 px-2
+              text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700 flex items-center">
+                <div><i class="material-icons text-3xl">import_export</i></div>
+                <div class="ml-2">Forward attempts</div>
+              </div>
             </div>
           </a>
           <a href="#">
-            <div class="py-4 px-6 rounded-b-lg
-              text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700">
-              Link fails
+            <div class="scroll-px-2
+              text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700
+              border-b border-gray-600">
+              <div class="py-4 px-2
+              text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700 flex items-center">
+                <div><i class="material-icons text-3xl">warning_amber</i></div>
+                <div class="ml-2">Link Fails</div>
+              </div>
             </div>
           </a>
-        </div>
+          <a href="#">
+            <div class="py-4 px-2 rounded-b-lg
+              text-gray-300 font-bold hover:bg-orange-300 hover:text-gray-700 flex items-center">
+              <div><i class="material-icons text-3xl">360</i></div>
+              <div class="ml-2">Rebalancing</div>
+            </div>
+          </a>
+        </nav>
       </div>
 
       <div class="p-2">
