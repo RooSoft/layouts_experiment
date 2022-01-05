@@ -126,21 +126,20 @@ body,
 	color: #fff;
 }
 
-/* Effect 2: Reveal */
-.st-effect-2.st-menu-open .st-pusher {
+.reveal.st-menu-open .st-pusher {
 	transform: translate3d(300px, 0, 0);
 }
 
-.st-effect-2.st-menu {
+.reveal.st-menu {
 	z-index: 1;
 }
 
-.st-effect-2.st-menu-open .st-effect-2.st-menu {
+.reveal.st-menu-open .reveal.st-menu {
 	visibility: visible;
 	transition: transform 0.5s;
 }
 
-.st-effect-2.st-menu::after {
+.reveal.st-menu::after {
 	display: none;
 }
 
