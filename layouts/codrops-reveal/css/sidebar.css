@@ -17,16 +17,6 @@ body,
 	background: #f3efe0;
 }
 
-.st-content,
-.st-content-inner {
-	position: relative;
-}
-
-.st-container {
-	position: relative;
-	overflow: hidden;
-}
-
 .st-pusher {
 	position: relative;
 	left: 0;
@@ -65,25 +55,6 @@ body,
 	height: 100%;
 	background: #48a770;
 	transition: all 0.5s;
-}
-
-.st-menu::after {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.2);
-	content: '';
-	opacity: 1;
-	transition: opacity 0.5s;
-}
-
-.st-menu-open .st-menu::after {
-	width: 0;
-	height: 0;
-	opacity: 0;
-	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 
 /* content style */
