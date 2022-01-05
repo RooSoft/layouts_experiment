@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1">
+    <link href="../css/styles.css" rel="stylesheet">
+    <script defer src="//unpkg.com/alpinejs@3.2.2/dist/cdn.min.js" defer></script>
+
+    <title>Tailwind + Alpine</title>
+</head>
+
+<body>
+    <div x-data="{ open: false }" x-effect="console.log(window.visualViewport.width)">
+        <button class="text-zinc-200 bg-indigo-800" @click="open = !open">Toggle</button>
+
+        <div class="flex -translate-x-[25vw] transition w-[125vw]" 
+            :class="open && 'translate-x-[0vw]'"
+            x-transition:enter="transition ease-out duration-300" 
+            x-transition:enter-start="-translate-x-[25vw]"
+            x-transition:enter-end="translate-x-0" 
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="translate-x-0" 
+            x-transition:leave-end="-translate-x-[25vw]">
+            <div class="bg-red-500 w-[25vw]">
+                Hello 👋
+            </div>
+
+            <div class="w-[100vw]" 
+                :class="open ? 'bg-sky-500' : 'bg-green-200'">
+                x-transition:enter="transition ease-out duration-300" 
+                x-transition:enter-start="-translate-x-[25vw]"
+                x-transition:enter-end="translate-x-0" 
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="translate-x-0" 
+                x-transition:leave-end="-translate-x-[25vw]">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
