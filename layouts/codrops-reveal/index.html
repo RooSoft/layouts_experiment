@@ -10,9 +10,13 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/demo.css">
     <link rel="stylesheet" type="text/css" href="css/component.css">
-    <script src="js/modernizr.custom.js"></script>
+    <script defer src="//unpkg.com/alpinejs@3.7.1/dist/cdn.min.js" defer></script>
 <body>
-    <div id="st-container" class="st-container">
+    <div id="st-container" 
+        class="st-container" 
+        :class="showSidebar && 'st-menu-open'"
+        @click="showSidebar = false"
+        x-data="{ showSidebar: false }" >
 
         <nav class="st-menu st-effect-2" id="menu-2">
             <h2 class="icon icon-stack">Sidebar</h2>
@@ -28,6 +32,8 @@
         <!-- content push wrapper -->
         <div class="st-pusher">
             <div class="st-content"><!-- this is the wrapper for the content -->
+                <button @click.stop="showSidebar = !showSidebar">Hamburger</button>
+
                 <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                     <!-- Top Navigation -->
                     <header class="codrops-header">
@@ -45,5 +51,11 @@
     
     <script src="js/classie.js"></script>
     <script src="js/sidebarEffects.js"></script>
+
+    <script>
+        resetMenu = function() {
+            classie.remove(container, 'st-menu-open');
+        }
+    </script>
 
 </body></html>
