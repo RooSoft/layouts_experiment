@@ -17,7 +17,7 @@
         :class="showSidebar && 'st-menu-open'"
         x-data="{ showSidebar: false }" >
 
-        <nav class="st-menu st-effect-2" id="menu-2">
+        <nav class="st-menu st-effect-2" id="menu-2" @click.outside="showSidebar = false">
             <h2 class="icon icon-stack">Sidebar</h2>
             <ul>
                 <li><a class="icon icon-data" href="#">Data Management</a></li>
@@ -29,7 +29,7 @@
         </nav>
 
         <!-- content push wrapper -->
-        <div class="st-pusher" @click="showSidebar = false">
+        <div class="st-pusher">
             <div class="st-content"><!-- this is the wrapper for the content -->
                 <button data-effect="st-effect-2" @click.stop="showSidebar = !showSidebar">Hamburger</button>
 
