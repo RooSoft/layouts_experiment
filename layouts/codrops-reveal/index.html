@@ -13,9 +13,8 @@
     <script defer src="//unpkg.com/alpinejs@3.7.1/dist/cdn.min.js" defer></script>
 <body>
     <div id="st-container" 
-        class="st-container" 
+        class="st-container st-effect-2" 
         :class="showSidebar && 'st-menu-open'"
-        @click="showSidebar = false"
         x-data="{ showSidebar: false }" >
 
         <nav class="st-menu st-effect-2" id="menu-2">
@@ -30,18 +29,17 @@
         </nav>
 
         <!-- content push wrapper -->
-        <div class="st-pusher">
+        <div class="st-pusher" @click="showSidebar = false">
             <div class="st-content"><!-- this is the wrapper for the content -->
-                <button @click.stop="showSidebar = !showSidebar">Hamburger</button>
+                <button data-effect="st-effect-2" @click.stop="showSidebar = !showSidebar">Hamburger</button>
 
                 <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                     <!-- Top Navigation -->
                     <header class="codrops-header">
-                        <h1>Sidebar Transitions <span>Transition effects for off-canvas views</span></h1>
+                        <h1>Fuck yeah dude <span>RooSoft's kick ass sidebar</span></h1>
                     </header>
                     <div class="main clearfix">
                         <div id="st-trigger-effects" class="column">
-                            <button data-effect="st-effect-2">Reveal</button>
                         </div>
                     </div><!-- /main -->
                 </div><!-- /st-content-inner -->
