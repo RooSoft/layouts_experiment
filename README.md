@@ -13,3 +13,7 @@ tailwindcss -i app.css -o ./layouts/css/styles.css --watch
 ```
 
 Serve the `layouts` folder using a server such as [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) plugin.
+
+## Icons
+
+[Google Icons](https://fonts.google.com/icons)
