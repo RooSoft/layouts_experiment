@@ -13,16 +13,26 @@
 </head>
 
 <body class="p-2 bg-slate-800 text-orange-300">
-  <div x-data="{ open: false }">
+  <div x-data="{ open: false }" x-effect="console.log(open)">
     <div id="experiment">
-      <div class="bg-slate-500 p-2 w-48 h-48 inline-block relative" :class="open || 'sidebar-open'">1</div>
-      <div class="bg-slate-700 p-2 w-48 h-48 inline-block relative" :class="open || 'sidebar-open'">2</div>  
+      <div 
+        class="bg-slate-500 p-2 w-48 h-48 inline-block slide" 
+        :class="open && 'sidebar-open'"
+        @click.outside="open = false;">
+        1
+      </div>
+      <div 
+        class="bg-slate-700 p-2 w-48 h-48 inline-block slide" 
+        :class="open && 'sidebar-open'">
+        2
+      </div>
     </div>
 
     <div id="control" class="mt-4">
-      <button class="bg-orange-700 hover:bg-orange-600 text-orange-300 rounded-md p-2 shadow-md" @click="open = !open">Show Sidebar</button>
+      <button class="bg-orange-700 hover:bg-orange-600 text-orange-300 rounded-md p-2 shadow-md"
+        @click.stop="open = !open">Show Sidebar</button>
 
-      <a href="/" class="mt-2 text-blue-600 underline">Main menu</a>  
+      <a href="/" class="mt-2 text-blue-600 underline">Main menu</a>
     </div>
   </div>
 </body>

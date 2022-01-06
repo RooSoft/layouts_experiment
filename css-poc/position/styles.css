@@ -1,3 +1,7 @@
+.slide {
+  transition: transform 0.5s;
+}
+
 .sidebar-open {
-  right: 10vw;
+  transform: translateX(-25vw);
 }
