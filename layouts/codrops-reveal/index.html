@@ -1,85 +1,96 @@
-<html lang="en" class="js csstransforms3d" style=""><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Sidebar Transitions</title>
-    <meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views">
-    <meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth">
-    <meta name="author" content="Codrops">
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../css/tailwind.css" >
-    <link rel="stylesheet" href="css/sidebar.css">
-    <script defer src="//unpkg.com/alpinejs@3.7.1/dist/cdn.min.js" defer></script>
+<html lang="en" class="js csstransforms3d" style="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Transitions</title>
+  <meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views">
+  <meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth">
+  <meta name="author" content="Codrops">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../css/tailwind.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <script defer src="//unpkg.com/alpinejs@3.7.1/dist/cdn.min.js" defer></script>
+
 <body>
-    <div id="st-container" 
-        class="st-container reveal text-slate-800 text-lg xl:text-base" 
-        :class="showSidebar && 'st-menu-open'"
-        x-data="{ showSidebar: false }" >
+  <div id="st-container" class="st-container reveal text-slate-800 text-lg xl:text-base"
+    :class="showSidebar && 'st-menu-open'" x-data="{ showSidebar: false }">
 
-        <nav class="st-menu reveal" 
-            @click.outside="showSidebar = false" 
-            @keyup.escape.window="showSidebar = false">
-            <h2 class="icon icon-stack">Sidebar</h2>
-            <ul>
-                <li><a class="icon icon-data" href="#">Data Management</a></li>
-                <li><a class="icon icon-location" href="#">Location</a></li>
-                <li><a class="icon icon-study" href="#">Study</a></li>
-                <li><a class="icon icon-photo" href="#">Collections</a></li>
-                <li><a class="icon icon-wallet" href="#">Credits</a></li>
-            </ul>
-        </nav>
+    <nav class="st-menu reveal" @click.outside="showSidebar = false" @keyup.escape.window="showSidebar = false">
+      <h2 class="icon icon-stack">Sidebar</h2>
+      <ul>
+        <li><a class="icon icon-data" href="#">Data Management</a></li>
+        <li><a class="icon icon-location" href="#">Location</a></li>
+        <li><a class="icon icon-study" href="#">Study</a></li>
+        <li><a class="icon icon-photo" href="#">Collections</a></li>
+        <li><a class="icon icon-wallet" href="#">Credits</a></li>
+      </ul>
+    </nav>
 
-        <!-- content push wrapper -->
-        <div class="st-pusher">
-            <div class="st-content"><!-- this is the wrapper for the content -->
-                <button class="m-2 p-2 text-3xl bg-emerald-400 text-emerald-800" @click.stop="showSidebar = !showSidebar">
-                    Hamburger
-                </button>
+    <!-- content push wrapper -->
+    <div class="st-pusher">
+      <div class="st-content">
+        <!-- this is the wrapper for the content -->
+        <button class="m-2 p-2 text-3xl bg-emerald-400 text-emerald-800" @click.stop="showSidebar = !showSidebar">
+          Hamburger
+        </button>
 
-                <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
-                    <!-- Top Navigation -->
-                    <header class="m-4 grid grid-cols-1">
-                        <div class="text-4xl md:text-5xl text-slate-700 justify-self-center">Fuck yeah dude </div>
-                        <div class="text-xl text-slate-500 justify-self-center mt-4">RooSoft's kick ass sidebar</span>
-                    </header>
-                    <div class="main m-2">
-                        
-
-                        Build your own “do-everything-yourself” Bitcoin full node that will make you a sovereign peer in the Bitcoin and Lightning network.
-
-No need to trust anyone else.
-
-What is the RaspiBolt?
-With this guide, you can set up a Bitcoin and Lightning node from scratch, doing everything yourself. You will learn about Linux, Bitcoin, and Lightning. As a result, you’ll have your very own RaspiBolt node, built by you and no one else.
-
-There are many reasons why you should run your own Bitcoin node.
-
-Keep Bitcoin decentralized. Use your node to help enforce your Bitcoin consensus rules.
-Take back your sovereignty. Let your node validate your own Bitcoin transactions. No need to ask someone else to tell you what’s happening in the Bitcoin network.
-Improve your privacy. Connect your wallets to your node so that you no longer need to reveal their whole financial history to external servers.
-Be part of Lightning. Run your own Lightning node for everyday payments and help building a robust, decentralized Bitcoin Lightning network.
-Did we mention that it’s fun, as well?
-
-RaspiBolt overview
-This guide explains how to set up your own Bitcoin node on a cheap Raspberry Pi. But it works on most hardware platforms because it only uses standard Debian Linux commands.
-
-Features
-Your Bitcoin node will offer the following functionality:
-
-Bitcoin: direct and trustless participation in the Bitcoin peer-to-peer network, full validation of blocks and transactions
-Electrum server: connect your compatible wallets (including hardware wallets) to your own node
-Blockchain Explorer: web-based Explorer to privately look up transactions, blocks, and more
-Lightning: full client with stable long-term channels and a web-based management interface
-Always on: services are constantly synced and available 24/7
-Reachable from anywhere: connect to all your services through the Tor network
+        <div id="st-content-inner">
+          <!-- extra div for emulating position:fixed of the menu -->
+          <!-- Top Navigation -->
+          <header class="m-4 grid grid-cols-1">
+            <div class="text-4xl md:text-5xl text-slate-700 justify-self-center">Fuck yeah dude </div>
+            <div class="text-xl text-slate-500 justify-self-center mt-4">RooSoft's kick ass sidebar</span>
+          </header>
+          <div class="main m-2">
 
 
+            Build your own “do-everything-yourself” Bitcoin full node that will make you a sovereign peer in the Bitcoin
+            and Lightning network.
 
-                    </div><!-- /main -->
-                </div><!-- /st-content-inner -->
-            </div><!-- /st-content -->
-        </div><!-- /st-pusher -->
-    </div><!-- /st-container -->
+            No need to trust anyone else.
+
+            What is the RaspiBolt?
+            With this guide, you can set up a Bitcoin and Lightning node from scratch, doing everything yourself. You
+            will learn about Linux, Bitcoin, and Lightning. As a result, you’ll have your very own RaspiBolt node, built
+            by you and no one else.
+
+            There are many reasons why you should run your own Bitcoin node.
+
+            Keep Bitcoin decentralized. Use your node to help enforce your Bitcoin consensus rules.
+            Take back your sovereignty. Let your node validate your own Bitcoin transactions. No need to ask someone
+            else to tell you what’s happening in the Bitcoin network.
+            Improve your privacy. Connect your wallets to your node so that you no longer need to reveal their whole
+            financial history to external servers.
+            Be part of Lightning. Run your own Lightning node for everyday payments and help building a robust,
+            decentralized Bitcoin Lightning network.
+            Did we mention that it’s fun, as well?
+
+            RaspiBolt overview
+            This guide explains how to set up your own Bitcoin node on a cheap Raspberry Pi. But it works on most
+            hardware platforms because it only uses standard Debian Linux commands.
+
+            Features
+            Your Bitcoin node will offer the following functionality:
+
+            Bitcoin: direct and trustless participation in the Bitcoin peer-to-peer network, full validation of blocks
+            and transactions
+            Electrum server: connect your compatible wallets (including hardware wallets) to your own node
+            Blockchain Explorer: web-based Explorer to privately look up transactions, blocks, and more
+            Lightning: full client with stable long-term channels and a web-based management interface
+            Always on: services are constantly synced and available 24/7
+            Reachable from anywhere: connect to all your services through the Tor network
 
 
-</body></html>
+
+          </div><!-- /main -->
+        </div><!-- /st-content-inner -->
+      </div><!-- /st-content -->
+    </div><!-- /st-pusher -->
+  </div><!-- /st-container -->
+
+
+</body>
+
+</html>
