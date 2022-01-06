@@ -1,7 +1,23 @@
+#experiment {
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+
+#sidebar {
+  width: 13rem;
+  margin-right: 10px;
+  position: absolute;
+  left: -13rem;
+}
+
+#main {
+  width: 100%;
+}
+
 .slide {
   transition: transform 0.5s;
 }
 
 .sidebar-open {
-  transform: translateX(-25vw);
+  transform: translateX(13rem);
 }
