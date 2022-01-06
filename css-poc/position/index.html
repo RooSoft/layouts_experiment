@@ -16,12 +16,21 @@
 <body class="p-2 bg-slate-800 text-orange-300">
   <div x-data="{ open: false }" x-effect="console.log(open)">
     <div id="experiment" class="flex">
+
       <nav id="sidebar"
-        class="bg-slate-500 text-2xl p-4 slide" 
+        class="bg-slate-500 text-2xl slide" 
         :class="open && 'sidebar-open'"
         @click.outside="open = false;"
         @keyup.escape.window="open = false">
-        <ul>
+        <button class="text-gray-900 w-10 h-10 ml-3 mt-3 relative focus:outline-none" @click.stop="open = !open">
+          <span class="sr-only">Open main menu</span>
+          <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <span class="block absolute h-1 w-6 bg-current transform rotate-45"></span>
+            <span class="block absolute h-1 w-6 bg-current transform opacity-0"></span>
+            <span class="block absolute h-1 w-6 bg-current transform -rotate-45"></span>
+          </div>
+        </button>
+        <ul class="p-4">
           <li><a class="icon icon-data" href="/">Data Management</a></li>
           <li><a class="icon icon-location" href="/">Location</a></li>
           <li><a class="icon icon-study" href="/">Study</a></li>
@@ -34,7 +43,11 @@
           <li><a class="icon icon-wallet" href="/">Credits</a></li>
         </ul>
       </nav>
-      <div id="main" class="text-slate-400 bg-slate-900 w-10 h-10 relative focus:outline-none slide" :class="open && 'sidebar-open'">
+
+      <div id="main" 
+        class="text-slate-400 bg-slate-900 w-10 h-10 relative focus:outline-none slide" 
+        :class="open && 'sidebar-open'"
+        >
         <div class="header_layout bg-orange-400 text-slate-700 pb-1.5">
           <div class="header_left md:hidden p-1 text-2xl">
             <button class="text-gray-900 w-10 h-10 relative focus:outline-none" @click.stop="open = !open">
@@ -67,8 +80,8 @@
           <a href="/" class="mt-2 text-blue-600 underline">Main menu</a>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </body>
 

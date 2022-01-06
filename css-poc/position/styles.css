@@ -8,18 +8,24 @@
   margin-right: 10px;
   position: absolute;
   left: -13rem;
+  z-index: 99;
 }
 
 #main {
   width: 100%;
+  transition: opacity 0.5s;
 }
 
-.slide {
+#sidebar.slide {
   transition: transform 0.5s;
 }
 
-.sidebar-open {
+#sidebar.sidebar-open {
   transform: translateX(13rem);
+}
+
+#main.sidebar-open {
+  opacity: 30%;
 }
 
 .header_layout {
