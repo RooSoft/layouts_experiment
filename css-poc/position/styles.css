@@ -126,5 +126,6 @@ body {
 #avatar {
   height: 35px;
   width: 35px;
+  margin-top: -2px;
   border-radius: 25px;
 }
