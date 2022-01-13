@@ -37,6 +37,7 @@
   --header-color: #b9b9c2;
   --header-backgroundcolor: rgb(52, 62, 94);
   --sidebar-backgroundcolor: rgb(38, 46, 70);
+  --sidebar-bordercolor: #ffffff77;
   --accent2-color: #CCBB85;
   --accent3-color: #BD2258;
 
@@ -75,6 +76,7 @@ body {
   left: 0;
   z-index: 99;
   font-family: Maven Pro;
+  border-right: 1px solid var(--sidebar-bordercolor);
 }
 
 @media (max-width: 768px) {
