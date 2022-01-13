@@ -36,30 +36,46 @@ body {
 }
 
 #sidebar {
-  z-index: -99;
-
   color: var(--header-color);
   background-color: var(--sidebar-backgroundcolor);
 
   width: var(--sidebar-width);
   margin-right: 10px;
+  padding-top: 0.5em;
   min-height: calc(100vh - 3.75rem);
 
   font-family: Maven Pro;
+  font-size: large;
 
-  border-right: 1px solid var(--sidebar-bordercolor);
+  border-right: 1px solid #FFF2;
 }
 
 @media (max-width: 768px) {
   #sidebar {
     z-index: 99;
     opacity: 1;
-    transform: translateX(-100%)
+    transform: translateX(-100%);
   }  
 }
 
-#sidebar>ul>li {
-  padding: 0 .25em .5em .25em;
+.sidebar-button {
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em 0.7em 0.5em;
+
+  border-bottom: 2px solid #00000033;
+
+  transition: background-color 200ms linear
+}
+
+.sidebar-button:hover {
+  background-color: #FFF1;
+}
+
+.sidebar-button.selected {
+  opacity: 100%;
+  background-color: var(--background-color);
+  transform: scaleX(1.02);
 }
 
 #hamburgerButton {

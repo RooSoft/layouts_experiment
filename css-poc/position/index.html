@@ -49,14 +49,14 @@
       <div class="flex flex-nowrap">
 
         <aside id="sidebar"
-          class="text-2xl slide" 
+          class="slide" 
           :class="open && 'sidebar-open'"
           @click.outside="open = false;"
           @keyup.escape.window="open = false">
-          <ul class="p-4">
-            <li><a href="/">Channels</a></li>
-            <li><a href="/">Forwards</a></li>
-            <li><a href="/">Opportunities</a></li>
+          <ul>
+            <li><a href="/" class="sidebar-button selected">Channels</a></li>
+            <li><a href="/" class="sidebar-button">Forwards</a></li>
+            <li><a href="/" class="sidebar-button">Opportunities</a></li>
           </ul>
         </aside>
 
@@ -72,7 +72,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </div>
 </body>
