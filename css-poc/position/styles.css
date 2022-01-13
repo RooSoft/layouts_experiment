@@ -67,17 +67,12 @@ body {
 }
 
 #sidebar {
-  z-index: 99;
-
   color: var(--header-color);
   background-color: var(--sidebar-backgroundcolor);
 
-  position: absolute;
-  left: 0;
-  top: var(--header-height);
   width: var(--sidebar-width);
-  min-height: 100vh;
   margin-right: 10px;
+  min-height: calc(100vh - 3.75rem);
 
   font-family: Maven Pro;
 
@@ -86,8 +81,9 @@ body {
 
 @media (max-width: 768px) {
   #sidebar {
-    left: calc(var(--sidebar-width) * -1);
+    z-index: 99;
     opacity: 1;
+    transform: translateX(-100%)
   }  
 }
 
@@ -106,16 +102,15 @@ body {
 }
 
 #main {
-  width: calc(100% - var(--sidebar-width));
+  width: 100%;
   transition: opacity 0.5s ease-in-out;
-  left: var(--sidebar-width);
   transition: ease-in-out all .25s;
 }
 
 @media (max-width: 768px) {
   #main {
     width: 100%;
-    left: 0;
+    margin-left: -12.5rem;
   }  
 }
 
@@ -124,7 +119,7 @@ body {
 }
 
 #sidebar.sidebar-open {
-  transform: translateX(12.5rem);
+  transform: translateX(0);
 }
 
 #sidebarCloseButton {
