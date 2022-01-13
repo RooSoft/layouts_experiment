@@ -17,25 +17,13 @@
   <div 
     x-data="{ open: false }" 
     x-effect="console.log(open)">
-    <div id="experiment" class="flex">
+    <div id="experiment">
 
       <nav id="sidebar"
         class="text-2xl slide" 
         :class="open && 'sidebar-open'"
         @click.outside="open = false;"
         @keyup.escape.window="open = false">
-        <div class="w-10 h-10 mt-7 ml-6">
-          <button id="sidebarCloseButton" 
-            class="text-gray-900 mt-6 relative focus:outline-none" 
-            @click.stop="open = !open">
-            <span class="sr-only">Open main menu</span>
-            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <span class="block absolute h-1 w-6 bg-current transform rotate-45"></span>
-              <span class="block absolute h-1 w-6 bg-current transform opacity-0"></span>
-              <span class="block absolute h-1 w-6 bg-current transform -rotate-45"></span>
-            </div>
-          </button>
-        </div>
         <ul class="p-4">
           <li><a class="icon icon-data" href="/">Channels</a></li>
           <li><a class="icon icon-location" href="/">Forwards</a></li>
@@ -43,36 +31,37 @@
         </ul>
       </nav>
 
+      <div id="header" class="header_layout pb-1.5 flex">
+        <div class="header_left p-1 mt-1 text-2xl">
+          <button id="hamburgerButton" 
+            class="text-gray-900 w-10 h-10 relative focus:outline-none" @click.stop="open = !open">
+            <span class="sr-only">Open main menu</span>
+            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
+                :class="{'rotate-45': open,' -translate-y-2': !open }"></span>
+              <span class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
+                :class="{'opacity-0': open } "></span>
+              <span class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
+                :class="{'-rotate-45': open, ' translate-y-2': !open}"></span>
+            </div>
+          </button>
+        </div>
+  
+        <div id="branding">
+          <img src="steer.svg" width="40" height="40" id="logo" />
+          <span id="brandingText">Branding</span>
+        </div>
+  
+        <div class="header_right">
+          <img id="avatar" height="40" width="40" src="avatar.png" />
+        </div>
+      </div>
+
+
       <div id="main" 
         class="w-10 h-10 relative focus:outline-none slide" 
         :class="open && 'sidebar-open'"
         >
-        <div id="header" class="header_layout pb-1.5">
-          <div class="header_left p-1 mt-1 text-2xl">
-            <button id="hamburgerButton" 
-              class="text-gray-900 w-10 h-10 relative focus:outline-none" @click.stop="open = !open">
-              <span class="sr-only">Open main menu</span>
-              <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <span class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
-                  :class="{'rotate-45': open,' -translate-y-2': !open }"></span>
-                <span class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
-                  :class="{'opacity-0': open } "></span>
-                <span class="block absolute h-1 w-6 bg-current transform transition duration-500 ease-in-out"
-                  :class="{'-rotate-45': open, ' translate-y-2': !open}"></span>
-              </div>
-            </button>
-          </div>
-    
-          <div id="branding">
-            <img src="steer.svg" width="40" height="40" id="logo" />
-            <span id="brandingText">Branding</span>
-          </div>
-    
-          <div class="header_right">
-            <img id="avatar" height="40" width="40" src="avatar.png" />
-          </div>
-        </div>
-
         <div id="content" class="mt-2 ml-3 mr-4 p-2">
           <p>Contrary to popular belief, Lorem Ipsum is not simply <span class="highlight">random</span> text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
           <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
