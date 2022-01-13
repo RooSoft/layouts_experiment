@@ -159,6 +159,7 @@ body {
 
 #branding {
   margin-left: 0.5em;
+  margin-top: 0.1em;
 
   grid-area: left;
   justify-self: left;
@@ -174,6 +175,7 @@ body {
 @media (max-width: 768px) {
   #branding {
     margin-left: -0.5em;
+    margin-top: 0.2em;
 
     grid-area: center;
     justify-self: center;
@@ -199,7 +201,7 @@ body {
 
 #logo {
   margin-right: 0.4em;
-  margin-top: 0.1em;
+  margin-top: 0em;
 }
 
 @media (max-width: 768px) {
