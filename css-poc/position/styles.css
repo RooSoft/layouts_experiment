@@ -181,11 +181,13 @@ body {
     justify-self: center;
 
     font-size: x-large;
+
+    overflow: hidden;
   }
 }
 
 #brandingText {
-  margin-top: 0.1em;
+  margin-top: 0.15em;
 }
 
 @media (max-width: 768px) {
@@ -200,7 +202,7 @@ body {
 }
 
 #logo {
-  margin-right: 0.4em;
+  margin-right: 0.5em;
   margin-top: 0.1em;
 }
 
