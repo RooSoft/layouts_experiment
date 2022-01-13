@@ -41,7 +41,6 @@ body {
 
   width: var(--sidebar-width);
   margin-right: 10px;
-  padding-top: 0.5em;
   min-height: calc(100vh - 3.75rem);
 
   font-family: Maven Pro;
