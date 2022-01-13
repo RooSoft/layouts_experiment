@@ -33,13 +33,13 @@
 
 :root {
   --background-color: #1A2238;
-  --text-color: #dddde6;
-  --header-color: #dddde6;
+  --text-color: #b9b9c2;
+  --header-color: #b9b9c2;
   --header-backgroundcolor: rgb(52, 62, 94);
   --accent2-color: #CCBB85;
   --accent3-color: #BD2258;
 
-  --header-height: 4rem;
+  --header-height: 3.75rem;
   --sidebar-width: 12.5rem;
 }
 
@@ -145,13 +145,36 @@ body {
 }
 
 .header_left {
-  grid-area: left;
-  justify-self: left;
+  display: none;
 }
 
-.header_center {
-  grid-area: center;
-  justify-self: center;
+@media (max-width: 768px) {
+  .header_left {
+    grid-area: left;
+    justify-self: left;
+  }
+}
+
+#branding {
+  grid-area: left;
+  justify-self: left;
+
+  font-family: Krona One;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  #branding {
+    grid-area: center;
+    justify-self: center;
+  }
+}
+
+#brandingText {
+  margin-top: 0.175em;
 }
 
 .header_right {
@@ -160,17 +183,12 @@ body {
 }
 
 #logo {
-  margin-right: 0.35em;
-}
-
-#branding {
-  font-family: Krona One;
-  justify-self: center;
+  margin-right: 0.4em;
+  margin-top: 0.1em;
 }
 
 #avatar {
-  height: 35px;
-  width: 35px;
-  margin-top: -2px;
+  margin-top: 0.38em;
+  margin-right: 0.5em;
   border-radius: 25px;
 }
