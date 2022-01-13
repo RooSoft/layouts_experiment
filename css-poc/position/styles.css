@@ -1,36 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&family=Krona+One&family=Special+Elite&family=Maven+Pro:wght@500&family=Work+Sans:wght@400&display=swap');
 
-/* :root {
-  --background-color: #1A2238;
-  --text-color: rgb(202 202 210);
-  --header-color: #9DAAF2;
-  --accent2-color: #FF6A3D;
-  --accent3-color: #f4DB7D;
-} */
-
-/* :root { //purple
-  --background-color: #1A2238;
-  --text-color: #cacad2;
-  --header-color: #A6B3FF;
-  --header-backgroundcolor: #373F61;
-  --accent2-color: #CCBB85;
-  --accent3-color: #BD2258;
-
-  --sidebar-width: 15rem;
-} */
-
-/* :root {  // greenish
-  --background-color: #1A2238;
-  --text-color: rgb(202 202 210);
-  --header-backgroundcolor: #789C90;
-  --header-color: #063E61;
-  --accent2-color: #CFC667;
-  --accent3-color: #BD2258;
-
-  --sidebar-width: 15rem;
-} */
-
-
 :root {
   --background-color: #1A2238;
   --text-color: #b9b9c2;
