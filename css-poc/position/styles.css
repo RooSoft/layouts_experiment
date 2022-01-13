@@ -36,6 +36,8 @@ body {
 }
 
 #sidebar {
+  z-index: -99;
+
   color: var(--header-color);
   background-color: var(--sidebar-backgroundcolor);
 
