@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Krona+One&family=Special+Elite&family=Maven+Pro:wght@500&family=Work+Sans:wght@400&display=swap');
+
 /* :root {
   --background-color: #1A2238;
   --text-color: rgb(202 202 210);
@@ -6,20 +8,52 @@
   --accent3-color: #f4DB7D;
 } */
 
-:root {
+/* :root { //purple
   --background-color: #1A2238;
-  --text-color: rgb(202 202 210);
-  --header-color: #a0adf7;
-  --header-backgroundcolor: #495381;
-  --accent2-color: #FF6A3D;
-  --accent3-color: #f4DB7D;
+  --text-color: #cacad2;
+  --header-color: #A6B3FF;
+  --header-backgroundcolor: #373F61;
+  --accent2-color: #CCBB85;
+  --accent3-color: #BD2258;
 
   --sidebar-width: 15rem;
+} */
+
+/* :root {  // greenish
+  --background-color: #1A2238;
+  --text-color: rgb(202 202 210);
+  --header-backgroundcolor: #789C90;
+  --header-color: #063E61;
+  --accent2-color: #CFC667;
+  --accent3-color: #BD2258;
+
+  --sidebar-width: 15rem;
+} */
+
+
+:root {
+  --background-color: #1A2238;
+  --text-color: #dddde6;
+  --header-color: #dddde6;
+  --header-backgroundcolor: rgb(52, 62, 94);
+  --accent2-color: #CCBB85;
+  --accent3-color: #BD2258;
+
+  --header-height: 4rem;
+  --sidebar-width: 12.5rem;
 }
 
 body {
   color: var(--text-color);
   background-color: var(--background-color);
+  font-size: 1em;
+  font-family: Rubik;
+}
+
+@media (max-width: 75em) {
+  body {
+    font-size: 1.3em;
+  }  
 }
 
 .link {
@@ -39,6 +73,7 @@ body {
   position: absolute;
   left: 0;
   z-index: 99;
+  font-family: Maven Pro;
 }
 
 @media (max-width: 768px) {
@@ -100,6 +135,7 @@ body {
 #header {
   color: var(--header-color);
   background-color: var(--header-backgroundcolor);
+  height: var(--header-height);
 }
 
 .header_layout {
@@ -121,6 +157,15 @@ body {
 .header_right {
   grid-area: right;
   justify-self: right;
+}
+
+#logo {
+  margin-right: 0.35em;
+}
+
+#branding {
+  font-family: Krona One;
+  justify-self: center;
 }
 
 #avatar {
