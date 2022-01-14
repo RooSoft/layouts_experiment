@@ -69,16 +69,6 @@
   justify-self: right;
 }
 
-#hamburgerButton {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  #hamburgerButton {
-    display: block;
-  }  
-}
-
 #logo {
   margin-right: 0.5em;
   margin-top: 0.1em;
