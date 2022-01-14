@@ -1,0 +1,97 @@
+#header {
+  width: 100vw;
+  color: var(--header-color);
+  background-color: var(--header-backgroundcolor);
+  height: var(--header-height);
+
+  box-shadow: 0 0 0.3em #111;
+}
+
+.header_layout {
+  display: grid;
+  grid-template-columns: 3em 1fr 3em;
+  grid-template-areas: "left center right";
+}
+
+.header_left {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header_left {
+    display: block;
+    grid-area: left;
+    justify-self: left;
+  }
+}
+
+#branding {
+  margin-left: 0.5em;
+  margin-top: 0.1em;
+
+  grid-area: left;
+  justify-self: left;
+
+  font-family: Krona One;
+  font-size: xx-large;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  #branding {
+    margin-left: -0.5em;
+    margin-top: 0.2em;
+
+    grid-area: center;
+    justify-self: center;
+
+    font-size: x-large;
+
+    overflow: hidden;
+  }
+}
+
+#brandingText {
+  margin-top: 0.15em;
+}
+
+@media (max-width: 768px) {
+  #brandingText {
+    margin-top: 0.35em;
+  }
+}
+
+.header_right {
+  grid-area: right;
+  justify-self: right;
+}
+
+#hamburgerButton {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #hamburgerButton {
+    display: block;
+  }  
+}
+
+#logo {
+  margin-right: 0.5em;
+  margin-top: 0.1em;
+}
+
+@media (max-width: 768px) {
+  #logo {
+    margin-right: 0.6em;
+  }
+}
+
+#avatar {
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 25px;
+}
