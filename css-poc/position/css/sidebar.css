@@ -4,6 +4,7 @@
 
   width: var(--sidebar-width);
   margin-right: 10px;
+  padding-top: 10px;
   min-height: calc(100vh - 3.75rem);
 
   font-family: Maven Pro;
@@ -36,7 +37,13 @@
 .sidebar-button.selected {
   opacity: 100%;
   background-color: var(--background-color);
-  transform: scaleX(1.02);
+  transform: translatex(-1px) scaleX(1.02);
+
+  padding-left: 1em;
+  padding-top: 0.75em;
+
+  border-radius: 50px 0px 0px 50px;
+  box-shadow: -1px 1px 0.2em #111;
 }
 
 #sidebar.slide {
