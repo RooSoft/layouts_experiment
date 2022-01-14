@@ -23,13 +23,6 @@
 
   left: 40%;
   top: 40%;
-
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-
-  /* transform: translateY(-50%); */
-  /* block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 */
 }
 
 .bar {
