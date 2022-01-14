@@ -6,6 +6,7 @@
   height: 2.5rem;
 
   color: var(--background-color);
+  background: var(--header-backgroundcolor);
 }
 
 @media (max-width: 768px) {
